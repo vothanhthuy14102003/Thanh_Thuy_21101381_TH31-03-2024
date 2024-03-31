@@ -1,0 +1,330 @@
+---Bài 1---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .info-container {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      background-image: url('https://th.bing.com/th/id/R.74b21c4ec5f063c738726ce42dd135be?rik=GSBG6903Sa8u7Q&pid=ImgRaw&r=0');
+      background-size: cover;
+      margin: auto;
+    }
+    
+    .info {
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    .yellow {
+      color: yellow;                                                                                    
+      font-size: 30px;
+      margin-top: 15px;
+    }
+    
+    .number {
+      color: white;
+      font-size: 40px;
+      margin-top: 10px;
+    }
+    
+    .pink {
+      color: pink;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="info-container">
+    <div class="info white">
+      <div class="number">88%</div>
+      <div class="yellow">Sản phẩm</div>
+      <div class="pink">Xuất khẩu sang các thị trường Mỹ, Châu Âu,...</div>
+    </div>
+    <div class="info white">
+      <div class="number">753</div>
+      <div class="yellow">Hợp đồng</div>
+      <div class="pink">Chuyển giao công nghệ và khoa học trong nước và ngoài nước</div>
+    </div>
+    <div class="info white">
+      <div class="number">769</div>
+      <div class="yellow">Thương hiệu</div>
+      <div class="pink">Độc quyền và nhượng quyền các thị trường</div>
+    </div>
+    <div class="info white">
+      <div class="number">9079</div>
+      <div class="yellow">Cửa hàng</div>
+      <div class="pink">Các tỉnh thành trong nước. Đặc biệt tại khu vực Tp.HCM </div>
+    </div>
+    <div class="info white">
+      <div class="number">182</div>
+      <div class="yellow">Chi nhánh</div>
+      <div class="pink">Phân phối tại các thị trường Mỹ</div>
+    </div>
+    <div class="info white">
+      <div class="number">95</div>
+      <div class="yellow">Bằng sáng chế</div>
+      <div class="pink">Phát triển các sản phẩm chất lượng, có thể sử dụng trong 20 năm</div>
+    </div>
+  </div>
+</body>
+</html>
+
+---Bài 2---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đóng góp ý kiến sản phẩm</title>
+    <style>
+        /* CSS styles here */
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 250px;
+            padding: 5px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .purple-text {
+            color: purple;
+            text-align: center;
+        }
+
+        .gray-text {
+            color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="purple-text">ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM</h2> 
+        <h5 class="gray-text">Góp ý của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng việt có dấu</h5>
+        <h5 class="gray-text">Các ý kiến đóng góp nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có)</h5>
+        <form action="#" method="post" onsubmit="submitForm(event)">
+            <div class="input-group">
+                <input type="text" id="input-name" placeholder="Họ và tên" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="input-card" placeholder="Mã thẻ" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="input-phone" placeholder="Số điện thoại" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="input-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <select id="input-customer-type" required>
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="vip">VVIP</option>
+                    <option value="regular">Regular</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" id="input-invoice" placeholder="Mã hoá đơn">
+            </div>
+            <div class="input-group">
+                <textarea id="input-description" placeholder="Nhập chi tiết mô tả" required></textarea>
+            </div>
+            <button class="button" type="submit">GỬI GÓP Ý</button>
+        </form>
+    </div>
+    <script>
+        // JavaScript code here
+        function submitForm(event) {
+            event.preventDefault(); 
+            var name = document.getElementById("input-name").value;
+            var card = document.getElementById("input-card").value;
+            var phone = document.getElementById("input-phone").value;
+            var email = document.getElementById("input-email").value;
+            var customerType = document.getElementById("input-customer-type").value;
+            var invoice = document.getElementById("input-invoice").value;
+            var description = document.getElementById("input-description").value;
+            
+            var formData = {
+                "Name": name,
+                "Card": card,
+                "Phone": phone,
+                "Email": email,
+                "CustomerType": customerType,
+                "Invoice": invoice,
+                "Description": description
+            };
+            alert(JSON.stringify(formData));
+            
+            // Reset the form
+            document.getElementById("input-name").value = "";
+            document.getElementById("input-card").value = "";
+            document.getElementById("input-phone").value = "";
+            document.getElementById("input-email").value = "";
+            document.getElementById("input-customer-type").value = "";
+            document.getElementById("input-invoice").value = "";
+           document.getElementById("input-description").value = "";
+        }
+    </script>
+</body>
+</html>
+---Bài 3
+<style>
+    
+    footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        width: 33.33%;
+        padding: 10px;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    .social-icons {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .social-icons li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .social-icons li a {
+        color: #333;
+        font-size: 20px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<footer>
+    <div class="container">
+        <div class="column">
+            <h3>KHOA HỌC VÀ KỸ THUẬT THÔNG TIN</h3>
+            <p>Đào tạo hai ngành Công nghệ thông tin (Đại học và sau đại học)</p>
+            <p>Khoa học Dữ liệu (Đại học)</p>
+        </div>
+        <div class="column">
+            <h3>Liên Kết</h3>
+            <ul>
+                <li>Website trường</li>
+                <li>Bộ môn Di Động và CN Web</li>
+                <li>Bộ môn Khoa học Dữ liệu</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Mạng xã hội</h3>
+            <ul class="social-icons">
+                <li><box-icon name='facebook-circle' type='logo' class="fab fa-facebook"></box-icon></li>
+                <li><box-icon name='google' type='logo' class="fab fa-google"></box-icon></li>
+                <li><box-icon name='twitter' type='logo' class="fab fa-twitter"></box-icon></li>
+                <li><box-icon name='linkedin' type='logo' class="fab fa-linkedin"></box-icon></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="copyright">Bản quyền thuộc Khoa học và Kỹ thuật Thông tin</p>
+</footer>
+---Bài 4---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đánh Giá</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Đánh Giá Sản Phẩm</h2>
+
+    <form action="/submit_review" method="post">
+        <label for="review">Đánh Giá:</label>
+        <textarea id="review" name="review" rows="6" required></textarea>
+
+        <input type="submit" value="Gửi Đánh Giá">
+    </form>
+</div>
+
+</body>
+</html>
